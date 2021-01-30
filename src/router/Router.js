@@ -1,19 +1,19 @@
 import { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
 // import Signup from "../pages/Signup";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 import Main from "../pages/Main";
 
 import Navbar from "../components/Navbar";
 
 function AppRouter() {
-
   return (
     <Router>
       <Navbar />
       <Switch>
+        <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         {/* <Route exact path="/forgot-password" component={ForgotPassword} /> */}
         {/* <Route

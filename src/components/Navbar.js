@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    cursor: "pointer",
   },
 }));
 
@@ -31,6 +32,14 @@ export default function ButtonAppBar() {
     history.push("/login");
   };
 
+  const handleRegisterClick = () => {
+    history.push("/register");
+  };
+
+  const handleMainClick = () => {
+    history.push("/");
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -38,10 +47,11 @@ export default function ButtonAppBar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            MY BLOG
+          <Typography variant="h6" className={classes.title} onClick={handleMainClick}>
+            MY AWESOME BLOG
           </Typography>
           <Button color="inherit" onClick={handleLoginClick}>Login</Button>
+          <Button color="inherit" onClick={handleRegisterClick}>Register</Button>
         </Toolbar>
       </AppBar>
     </div>

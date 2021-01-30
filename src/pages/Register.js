@@ -30,6 +30,7 @@ const stylesFunc = makeStyles((theme) => ({
     flexDirection: "row",
     flex: 1,
     // border: "2px solid green",
+    overflowY: "hidden",
   },
   image: {
     backgroundImage: `url(${Image})`,
@@ -64,7 +65,7 @@ const initialValues = {
   password: "",
 };
 
-const Login = () => {
+const Register = () => {
   const [loginError, setLoginError] = useState(null);
   const history = useHistory();
   const signinStyles = stylesFunc();
@@ -88,7 +89,7 @@ const Login = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography className={signinStyles.signIn} variant="h4">
-          Login
+          Register
         </Typography>
         <Formik
           initialValues={initialValues}
@@ -130,7 +131,7 @@ const Login = () => {
                     color="primary"
                     fullWidth
                   >
-                    Login
+                    Register
                   </Button>
                 </Grid>
               </Grid>
@@ -144,9 +145,9 @@ const Login = () => {
           )}
         </Formik>
         <p>
-          Don't have an account?
-          <a className={signinStyles.register} href="/register">
-            Register
+          Already have an account?
+          <a className={signinStyles.register} href="/login">
+            Login
           </a>
         </p>
 
@@ -158,4 +159,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
