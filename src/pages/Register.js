@@ -48,7 +48,7 @@ const stylesFunc = makeStyles((theme) => ({
   },
   avatar: {
     margin: "1rem auto",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
   },
   signIn: {
     margin: "1rem",
@@ -123,12 +123,12 @@ const Register = () => {
                     error={errors.password}
                     helperText={errors.password}
                   />
-                </Grid>
+                </Grid> 
                 <Grid item xs={12}>
                   <Button
                     type="submit"
                     variant="contained"
-                    color="primary"
+                    color="secondary"
                     fullWidth
                   >
                     Register
