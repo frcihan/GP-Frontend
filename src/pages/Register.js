@@ -33,7 +33,7 @@ const stylesFunc = makeStyles((theme) => ({
     overflowY: "hidden",
   },
   image: {
-    backgroundImage: `url(${Image})`,
+    backgroundImage: "url(https://picsum.photos/640/480)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
 
@@ -83,7 +83,7 @@ const Register = () => {
 
   return (
     <div className={signinStyles.login}>
-      <div className={signinStyles.image}></div>
+      <Grid item xs={false} sm={4} md={7} className={signinStyles.image} />
       <Container className={signinStyles.wrapper} maxWidth="sm">
         <Avatar className={signinStyles.avatar}>
           <LockOutlinedIcon />
@@ -123,7 +123,7 @@ const Register = () => {
                     error={errors.password}
                     helperText={errors.password}
                   />
-                </Grid> 
+                </Grid>
                 <Grid item xs={12}>
                   <Button
                     type="submit"
