@@ -35,7 +35,7 @@ const Main = () => {
 
   const mainStyles = stylesFunc();
 
-  const fetchData = async (url = "https://dj-gp-backend.herokuapp.com/list/") => {
+  const fetchData = async (url = "https://gp-backend.herokuapp.com/list/") => {
     try {
       const result = await axios.get(url);
       setBlogList([...blogList, ...result?.data?.results]);
