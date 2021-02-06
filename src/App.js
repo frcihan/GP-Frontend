@@ -6,6 +6,7 @@ function App() {
     <AppContextProvider>
       <AppRouter />
     </AppContextProvider>
+    // TODO: delete this line
   );
 }
 
